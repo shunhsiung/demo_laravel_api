@@ -18,6 +18,7 @@ class CreateOrdersTable extends Migration
             $table->foreignId('user_id')->constrained('users');
             $table->integer('total');
             $table->boolean('finished')->default(0);
+            $table->softDeletes();
             $table->timestamps();
         });
     }
